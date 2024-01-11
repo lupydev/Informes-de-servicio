@@ -12,4 +12,4 @@ class AbstractBase(SQLModel):
     created: datetime = Field(default_factory=datetime.utcnow)
     updated: datetime = Field(default_factory=datetime.utcnow)
     active: bool = Field(default=True)
-    verifided: bool = Field(default=False)
+    verified: bool = Field(default=False)
