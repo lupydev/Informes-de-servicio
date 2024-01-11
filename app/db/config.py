@@ -11,4 +11,7 @@ URL = os.getenv("URL")
 # Configurar la conexión a la base de datos PostgreSQL
 engine = create_engine(URL, echo=True)
 
-session = Session(engine)
+
+def get_session():
+    with Session(engine) as session:
+        yield session
